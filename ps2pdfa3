@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while [ $# -gt 0 ]; do
+	source=$1
+	ps2pdf -sPAPERSIZE=a3 "$source"
+	rm "$source"
+	shift
+done
+

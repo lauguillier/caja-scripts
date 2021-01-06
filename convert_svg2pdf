@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+while [ $# -gt 0 ]; do
+	input=$1
+	pdf_file=`echo "$input" | sed 's/\.\w*$/.pdf/'`
+	inkscape -z -f "$input" -A "$pdf_file"
+	shift
+done

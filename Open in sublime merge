@@ -1,0 +1,2 @@
+#!/bin/bash
+sublime_merge $CAJA_SCRIPT_CURRENT_URI

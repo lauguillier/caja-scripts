@@ -1,0 +1,10 @@
+#!/bin/bash
+
+qual=$(zenity --scale --title="Convert to jpeg" --text "Qualité" --value="90" --min-value="0" --max-value="100" --step="5")
+
+while [ $# -gt 0 ]; do
+	picture=$1
+	jpg_file=`echo "$picture" | sed 's/\.\w*$/.jpg/'`
+	/usr/bin/convert -quality $qual "$picture" jpeg:"$jpg_file"
+	shift
+done

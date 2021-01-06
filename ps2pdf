@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while [ $# -gt 0 ]; do
+	source=$1
+	ps2pdf  "$source"
+	rm "$source"
+	shift
+done
+

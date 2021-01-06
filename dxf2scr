@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while [ $# -gt 0 ]; do
+	input=$1
+	scr_file=`echo "$input" | sed 's/\.\w*$/.scr/'`
+	/home/laurent/bin/dxf2scr "$input" "$scr_file" | zenity --text-info
+	shift
+done
